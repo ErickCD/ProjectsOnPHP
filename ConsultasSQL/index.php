@@ -53,10 +53,17 @@ function getArraySQL($sql){
 	return $rawData; //Devolvemos el array
 }
 
-$sql = "select product_name, units_per_case, shelf_depth from product order by product_name limit 0, 40;";
+$sql = "select product_name, units_per_case, shelf_depth from product order by product_name limit 0, 10;";
 
 $myArray = getArraySQL($sql);
+echo('<br>');
+//Tranformando el array en un JSON
+$json = json_encode($myArray);
+//Imprimiendo JSON
+echo $json;
 
-echo json_encode($myArray);
+echo('<br><br>');
 
+//Imprimer array normal
+print_r($myArray);
 ?>
