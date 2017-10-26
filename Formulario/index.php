@@ -6,8 +6,9 @@
 </head>
 
 <body>
-
-<label for="nombre" >Nombre:</label>
+<?php 
+	echo
+'<label for="nombre" >Nombre:</label>
 <input onKeyUp="proceso()" type="text" name="nombre" id="nombre" />
 <br>
 <label for="edad" >Edad:</label>
@@ -26,7 +27,7 @@
 <div id="redad"></div>
 <div id="rsexo"></div>
 
-<script src="funcion.js"></script>
-
+<script src="funcion.js"></script>';
+?>
 </body>
 </html>
